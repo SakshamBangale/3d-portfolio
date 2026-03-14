@@ -3,52 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saksham Bangale - 3D Portfolio</title>
+    <title>Saksham Bangale - Advanced 3D Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader"></div>
+        <p>Loading 3D Environment...</p>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">SB</div>
             <ul class="nav-menu">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="theme-toggle">
+                <button id="theme-btn">🌙</button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section with 3D Canvas -->
+    <!-- Hero Section -->
     <section id="hero" class="hero">
         <canvas id="canvas"></canvas>
         <div class="hero-content">
-            <h1 class="hero-title">Saksham Bangale</h1>
-            <p class="hero-subtitle">Creative Developer & 3D Designer</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+            <div class="hero-text">
+                <h1 class="hero-title">Saksham Bangale</h1>
+                <p class="hero-role">Full-Stack Developer & 3D Graphics Specialist</p>
+                <p class="hero-desc">Building immersive digital experiences with cutting-edge technology</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse"></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">🎨</div>
-                    <h3>Design</h3>
-                    <p>Creating stunning visual experiences with modern design principles and attention to detail.</p>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <h3>Frontend</h3>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Three.js</span>
+                        <span class="tag">WebGL</span>
+                        <span class="tag">Canvas API</span>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">💻</div>
-                    <h3>Development</h3>
-                    <p>Building interactive web applications with cutting-edge technologies and best practices.</p>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <h3>Backend</h3>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">REST APIs</span>
+                    </div>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">✨</div>
-                    <h3>Innovation</h3>
-                    <p>Pushing boundaries with 3D graphics, animations, and immersive user experiences.</p>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <h3>3D & Graphics</h3>
+                        <span class="skill-level">Expert</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Three.js</span>
+                        <span class="tag">Babylon.js</span>
+                        <span class="tag">WebGL</span>
+                        <span class="tag">Shaders</span>
+                        <span class="tag">Animations</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <h3>Tools & DevOps</h3>
+                        <span class="skill-level">Advanced</span>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Webpack</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,25 +117,128 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">3D Scene</div>
-                    <h3>Interactive 3D Scene</h3>
-                    <p>An immersive 3D environment with particle effects and dynamic lighting using Three.js.</p>
-                    <a href="#" class="project-link">View Project →</a>
+                <div class="project-card" data-tech="Three.js, WebGL">
+                    <div class="project-image project-1"></div>
+                    <div class="project-info">
+                        <h3>Interactive 3D Universe</h3>
+                        <p>A fully interactive 3D space environment with real-time particle systems, orbital mechanics, and advanced lighting.</p>
+                        <div class="project-tech">
+                            <span>Three.js</span>
+                            <span>WebGL</span>
+                            <span>Physics</span>
+                        </div>
+                        <a href="#" class="project-link">Explore →</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">Portfolio</div>
-                    <h3>Portfolio Website</h3>
-                    <p>Modern portfolio showcasing 3D graphics, smooth animations, and responsive design.</p>
-                    <a href="#" class="project-link">View Project →</a>
+
+                <div class="project-card" data-tech="React, Node.js">
+                    <div class="project-image project-2"></div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with real-time inventory, payment gateway integration, and advanced analytics.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">View →</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">Designs</div>
-                    <h3>Web Design</h3>
-                    <p>Beautiful UI/UX designs with glassmorphism effects and modern aesthetics.</p>
-                    <a href="#" class="project-link">View Project →</a>
+
+                <div class="project-card" data-tech="WebGL, Canvas">
+                    <div class="project-image project-3"></div>
+                    <div class="project-info">
+                        <h3>Procedural Terrain Generator</h3>
+                        <p>Real-time terrain generation using Perlin noise with dynamic LOD system and weather effects.</p>
+                        <div class="project-tech">
+                            <span>WebGL</span>
+                            <span>Canvas</span>
+                            <span>Algorithms</span>
+                        </div>
+                        <a href="#" class="project-link">Demo →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tech="Vue.js, Firebase">
+                    <div class="project-image project-4"></div>
+                    <div class="project-info">
+                        <h3>Real-time Chat Application</h3>
+                        <p>Scalable chat platform with real-time messaging, video calls, and end-to-end encryption.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>WebRTC</span>
+                        </div>
+                        <a href="#" class="project-link">Open →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tech="Three.js, AI">
+                    <div class="project-image project-5"></div>
+                    <div class="project-info">
+                        <h3>AI-Powered 3D Avatar</h3>
+                        <p>Machine learning model powering a customizable 3D avatar with real-time facial animation.</p>
+                        <div class="project-tech">
+                            <span>Three.js</span>
+                            <span>TensorFlow</span>
+                            <span>AI/ML</span>
+                        </div>
+                        <a href="#" class="project-link">Try →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tech="React, GraphQL">
+                    <div class="project-image project-6"></div>
+                    <div class="project-info">
+                        <h3>Social Media Analytics</h3>
+                        <p>Advanced analytics dashboard with real-time data visualization and predictive analytics.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>GraphQL</span>
+                            <span>D3.js</span>
+                        </div>
+                        <a href="#" class="project-link">Analyze →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Senior 3D Developer</h3>
+                        <p class="company">Tech Innovations Inc.</p>
+                        <p class="date">2023 - Present</p>
+                        <p class="description">Led development of immersive web experiences using Three.js and WebGL. Optimized rendering performance by 60%.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Full-Stack Developer</h3>
+                        <p class="company">Digital Solutions Co.</p>
+                        <p class="date">2021 - 2023</p>
+                        <p class="description">Built scalable web applications serving 100K+ users. Implemented CI/CD pipelines and microservices architecture.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Frontend Developer</h3>
+                        <p class="company">Creative Agency Plus</p>
+                        <p class="date">2020 - 2021</p>
+                        <p class="description">Developed interactive web interfaces with React and Vue.js. Focused on animations and user experience.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,13 +247,41 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="contact-subtitle">Let's create something amazing together</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-btn">Email Me</a>
-                <a href="https://github.com/SakshamBangale" class="contact-btn">GitHub</a>
-                <a href="https://linkedin.com/in/SakshamBangale" class="contact-btn">LinkedIn</a>
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="contact-desc">Got an exciting project? Let's collaborate!</p>
+            
+            <div class="contact-grid">
+                <div class="contact-method">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:saksham@example.com">saksham@example.com</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/SakshamBangale" target="_blank">SakshamBangale</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">🐙</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/SakshamBangale" target="_blank">SakshamBangale</a>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">🐦</div>
+                    <h3>Twitter</h3>
+                    <a href="https://twitter.com/SakshamBangale" target="_blank">@SakshamBangale</a>
+                </div>
             </div>
+
+            <form class="contact-form" id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
         </div>
     </section>
 
@@ -99,7 +290,10 @@
         <p>&copy; 2026 Saksham Bangale. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="advanced-graphics.js"></script>
+    <script src="interactions.js"></script>
 </body>
 </html>
