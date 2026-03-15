@@ -9,6 +9,7 @@ function initThreeJS() {
 
     // Camera
     const width = window.innerWidth;
+    
     const height = window.innerHeight;
     camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     camera.position.z = 30;
