@@ -9,6 +9,7 @@ function initThreeJS() {
     scene.background = new THREE.Color(0x0a0e27);
 
     // Camera
+
     
     const width = window.innerWidth;
     
