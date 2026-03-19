@@ -18,6 +18,7 @@ function initThreeJS() {
     camera.position.z = 30;
 
     // Renderer
+    
     const canvas = document.getElementById('canvas');
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setSize(width, height);
