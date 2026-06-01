@@ -3,6 +3,7 @@
 let scene, camera, renderer;
 let geometries = [];
 
+
 function initThreeJS() {
     
     // Scene
