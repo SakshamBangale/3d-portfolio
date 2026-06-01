@@ -1,4 +1,5 @@
 // Three.js Scene Setup
+
 let scene, camera, renderer;
 let geometries = [];
 
